@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+	"tns_handler",
+	"tns_packets",
+]

@@ -1,0 +1,13 @@
+[package]
+name = "tns_handler"
+version = "0.0.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tns_packets = { path = "../tns_packets" }
+env_logger = "0.9.1"
+log = "0.4.17"
+regex = "1.6.0"
+clap = "4.0.11"
