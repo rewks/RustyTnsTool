@@ -179,7 +179,7 @@ impl TnsAcceptPacket {
     pub fn new(body: &Vec<u8>) -> Self {
         let data_length = bytes_to_u16_be(&body[10..=11]).unwrap();
         let data_offset = bytes_to_u16_be(&body[12..=13]).unwrap() - 8; // -8 due to packet header not being read seperately
-        log::info!("Accept packet received with data length of {}, at offset of {}", data_length, data_offset);
+        log::debug!("Accept packet received with data length of {}, at offset of {}", data_length, data_offset);
 
         Self {
             tns_version: bytes_to_u16_be(&body[0..=1]).unwrap(),
